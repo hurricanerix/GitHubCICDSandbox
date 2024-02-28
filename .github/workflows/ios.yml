@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@v3
       - name: List available simulators
         run: xcrun simctl list devices
+      - name: Select Xcode version
+        run: sudo xcode-select -s '/Applications/Xcode_13.1.0.app'
       - name: Set Default Scheme
         run: |
           scheme_list=$(xcodebuild -list -json | tr -d "\n")
