@@ -26,11 +26,11 @@ jobs:
         env:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
-        run:
-          xcodebuild build-for-testing -scheme YourScheme -"$filetype_parameter" "$file_to_build" -destination 'platform=iOS Simulator,name=iPad Pro (11-inch) (4th generation),OS=16.2'
+        run: |
+          xcodebuild build-for-testing -scheme GitHubCICDSandbox -destination 'platform=iOS Simulator,name=iPad Pro (11-inch) (4th generation),OS=16.2'
       - name: Test
         env:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
-        run:
-          xcodebuild test-without-building -scheme YourScheme -"$filetype_parameter" "$file_to_build" -destination 'platform=iOS Simulator,name=iPad Pro (11-inch) (4th generation),OS=16.2'
+        run: |
+          xcodebuild test-without-building -scheme GitHubCICDSandbox -destination 'platform=iOS Simulator,name=iPad Pro (11-inch) (4th generation),OS=16.2'
