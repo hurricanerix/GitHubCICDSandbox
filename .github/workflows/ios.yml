@@ -29,10 +29,10 @@ jobs:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
         run: |
-          xcodebuild build-for-testing -scheme GitHubCICDSandbox -destination 'platform=iOS Simulator,name=iPad Pro,OS=16.2'
+          xcodebuild build-for-testing -scheme GitHubCICDSandbox -destination 'platform=iOS Simulator,id=01ECCF97-F909-4883-A478-6E98B706BDF8,OS=16.2'
       - name: Test
         env:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
         run: |
-          xcodebuild test-without-building -scheme GitHubCICDSandbox -destination 'platform=iOS Simulator,name=iPad Pro,OS=16.2'
+          xcodebuild test-without-building -scheme GitHubCICDSandbox -destination 'platform=iOS Simulator,id=01ECCF97-F909-4883-A478-6E98B706BDF8,OS=16.2'
