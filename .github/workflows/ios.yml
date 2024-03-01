@@ -29,10 +29,10 @@ jobs:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
         run: |
-          xcodebuild build-for-testing -scheme GitHubCICDSandbox -destination 'platform=iOS Simulator,name=iPhone,OS=16.2'
+          xcodebuild build-for-testing -scheme GitHubCICDSandbox -destination 'platform=iOS Simulator,name=iPhone,OS=15.0'
       - name: Test
         env:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
         run: |
-          xcodebuild test-without-building -scheme GitHubCICDSandbox -destination 'platform=iOS Simulator,name=iPhone,OS=16.2'
+          xcodebuild test-without-building -scheme GitHubCICDSandbox -destination 'platform=iOS Simulator,name=iPhone,OS=15.0'
